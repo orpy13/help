@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CargoItem" load_steps=3 format=3 uid="uid://8qr0fpye8j1n"]
+
+[ext_resource type="Texture2D" uid="uid://cvlxawgi1juag" path="res://bullet.png" id="1_crpb2"]
+[ext_resource type="Script" path="res://Autoload/CargoItem.gd" id="2_ab1fs"]
+
+[resource]
+script = ExtResource("2_ab1fs")
+cargo_type = "Coal"
+cargo_mass_ton = 100
+cargo_value = 10
+cargo_sprite = ExtResource("1_crpb2")

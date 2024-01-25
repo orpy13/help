@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CargoStore" load_steps=3 format=3 uid="uid://t6yaeof5hnkq"]
+
+[ext_resource type="Resource" uid="uid://8qr0fpye8j1n" path="res://resource/coal.tres" id="1_7gwl0"]
+[ext_resource type="Script" path="res://Autoload/CargoStore.gd" id="1_ssiwe"]
+
+[resource]
+script = ExtResource("1_ssiwe")
+cargo_store = Array[Resource("res://Autoload/CargoItem.gd")]([null, ExtResource("1_7gwl0")])

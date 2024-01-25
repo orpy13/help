@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CargoStore" load_steps=5 format=3 uid="uid://6nekxy5244g8"]
+
+[ext_resource type="Script" path="res://Autoload/CargoStore.gd" id="1_h1yo8"]
+[ext_resource type="Resource" uid="uid://8qr0fpye8j1n" path="res://resource/coal.tres" id="1_qhgb1"]
+[ext_resource type="Script" path="res://Autoload/CargoItem.gd" id="2_ykc34"]
+
+[sub_resource type="Resource" id="Resource_5fn5n"]
+script = ExtResource("2_ykc34")
+
+[resource]
+script = ExtResource("1_h1yo8")
+cargo_store = Array[ExtResource("2_ykc34")]([ExtResource("1_qhgb1"), null, SubResource("Resource_5fn5n"), null, null])
