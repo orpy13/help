@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnpnbvxl6m5de"]
+
+[ext_resource type="Script" path="res://gui_slot.gd" id="1_k8ebf"]
+[ext_resource type="Texture2D" uid="uid://d1qocgjb2ni75" path="res://InvSlot.png" id="2_v1gc3"]
+
+[node name="GuiSlot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(155, 64)
+offset_right = 155.0
+offset_bottom = 64.0
+script = ExtResource("1_k8ebf")
+
+[node name="BackGround" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.54688, 1)
+texture = ExtResource("2_v1gc3")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 78.0
+offset_bottom = 64.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Item" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 160.0
+offset_bottom = 64.0
+
+[node name="Panel" type="Panel" parent="CenterContainer2"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer2/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+fit_content = true

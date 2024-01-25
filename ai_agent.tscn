@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd35lluvsqq7t"]
+
+[ext_resource type="Script" path="res://AiAgent.gd" id="1_mr3oe"]
+[ext_resource type="Resource" uid="uid://t6yaeof5hnkq" path="res://resource/AIcargoStore.tres" id="2_yvext"]
+[ext_resource type="Texture2D" uid="uid://c4cngpebbs5sd" path="res://icon.svg" id="3_37lbv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy80r"]
+size = Vector2(54, 46)
+
+[node name="AiAgent" type="CharacterBody2D"]
+input_pickable = true
+script = ExtResource("1_mr3oe")
+cargo_store = ExtResource("2_yvext")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hy80r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.337255, 1, 1)
+scale = Vector2(0.4375, 0.367188)
+texture = ExtResource("3_37lbv")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
